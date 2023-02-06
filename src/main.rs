@@ -1,9 +1,6 @@
 use std::io;
 
 fn main() {
-    
-    /*
-    * the check part
 
     let my_number: u64 = 73;
     
@@ -18,7 +15,7 @@ fn main() {
     } else {
         println!("its no prim");
     }
-    */
+    
 
     // * gen prims in range
 
