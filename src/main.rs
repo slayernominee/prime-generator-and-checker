@@ -69,7 +69,11 @@ fn main() {
     } else {
         println!("-----------------------------------------------------------------");
         println!("Help Page");
-        println!("Please use the arguments: --gen <start> <end> or --check <number>");
+        println!("Desription: ");
+        println!("Just a simple tool written in Rust to check / generste prim numbers");
+        println!("Commands: ");
+        println!("./prim --check <number>");
+        println!("./prim --gen <start> <end>");
     }
 }
 
