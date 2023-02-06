@@ -72,9 +72,9 @@ fn main() {
         println!("Desription: ");
         println!("Just a simple tool written in Rust to check / generste prim numbers");
         println!("Commands: ");
-        println!("./prim --help                 |  show the help");
-        println!("./prim --check <number>       |  check it a number is a prim number");
-        println!("./prim --gen <start> <end>    |  generate the prim numbers in an area");
+        println!("./prims --help                 |  show the help");
+        println!("./prims --check <number>       |  check it a number is a prim number");
+        println!("./prims --gen <start> <end>    |  generate the prim numbers in an area");
         println!("-----------------------------------------------------------------");
     }
 }
