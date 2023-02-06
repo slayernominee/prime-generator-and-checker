@@ -1,4 +1,10 @@
+use std::io;
+
 fn main() {
+    
+    /*
+    * the check part
+
     let my_number: u64 = 73;
     
     // * values my_number is dividable
@@ -12,10 +18,27 @@ fn main() {
     } else {
         println!("its no prim");
     }
+    */
 
     // * gen prims in range
-    println!("prims between 2 and 100: ");
-    let prims: Vec<u64> = gen_prims(2, 100);
+
+    let mut start = String::new();
+    let mut end = String::new();
+
+    println!("Where should the Prim Generator Start?");
+    io::stdin().read_line(&mut start)
+        .expect("couldnt read line");
+    
+    let start: u64 = start.trim().parse().expect("no valid number");
+
+    println!("Where should the Prim Generator Stop?");
+    io::stdin().read_line(&mut end)
+        .expect("couldnt read line");
+
+    let end: u64 = end.trim().parse().expect("no valid number");
+    
+    println!("Prims between {start} and {end}: ");
+    let prims: Vec<u64> = gen_prims(start, end);
     println!("{:?}", prims);
 }
 
