@@ -20,8 +20,6 @@ fn main() {
             mode = &rescue_mode;
         }
     }
-    
-        
 
     // valid modes:
     // --gen, --check, --help
@@ -30,24 +28,6 @@ fn main() {
 
         let start: u64 = args[2].trim().parse().expect("no valid number on argument 2");
         let end: u64 = args[3].trim().parse().expect("no valid number on argument 3");
-
-        /*
-        let mut start = String::new();
-        let mut end = String::new();
-
-        println!("Where should the Prim Generator Start?");
-        io::stdin().read_line(&mut start)
-            .expect("couldnt read line");
-        
-        let start: u64 = start.trim().parse().expect("no valid number");
-
-        println!("Where should the Prim Generator Stop?");
-        io::stdin().read_line(&mut end)
-            .expect("couldnt read line");
-
-        let end: u64 = end.trim().parse().expect("no valid number");
-        
-         */
 
         println!("Prims between {start} and {end}: ");
         let prims: Vec<u64> = gen_prims(start, end);
@@ -67,15 +47,19 @@ fn main() {
         }
         
     } else {
-        println!("-----------------------------------------------------------------");
-        println!("Help Page");
-        println!("Desription: ");
-        println!("Just a simple tool written in Rust to check / generste prim numbers");
-        println!("Commands: ");
-        println!("./prims --help                 |  show the help");
-        println!("./prims --check <number>       |  check it a number is a prim number");
-        println!("./prims --gen <start> <end>    |  generate the prim numbers in an area");
-        println!("-----------------------------------------------------------------");
+        println!("
+----------------------------------------------------------------------
+Prims - Help Page
+
+Desription:
+Just a simple tool written in Rust to check / generste prim numbers
+
+Commands:
+./prims --help                 |  show the help 
+./prims --check <number>       |  check it a number is a prim number 
+./prims --gen <start> <end>    |  generate the prim numbers in an area
+----------------------------------------------------------------------
+");
     }
 }
 
