@@ -73,13 +73,7 @@ fn is_prim(number: u64) -> bool {
     // max number is the root from the number
     let limit: u64 = f64::sqrt(number as f64) as u64 + 1;
 
-
-    for i in 5..limit {
-        if number % i == 0 {
-            return false;
-        }
-    }
-    return true;
+    !(2..limit).any(|i| number % i == 0)
 }
 
 fn get_dividable_by(number: u64) -> Vec<u64> {
