@@ -2,6 +2,9 @@ use std::env;
 
 fn main() {
 
+    // print 100 test
+    //(1..=100).for_each(|i| println!("test"));
+
     let args: Vec<String> = env::args().collect();
 
     let rescue_mode: String = String::from("--help");
@@ -71,9 +74,9 @@ fn is_prim(number: u64) -> bool {
     }
 
     // max number is the root from the number
-    let limit: u64 = f64::sqrt(number as f64) as u64 + 1;
+    let limit: u64 = f64::sqrt(number as f64) as u64;
 
-    !(2..limit).any(|i| number % i == 0)
+    !(2..=limit).rev().any(|i| number % i == 0)
 }
 
 fn get_dividable_by(number: u64) -> Vec<u64> {
@@ -90,7 +93,7 @@ fn get_dividable_by(number: u64) -> Vec<u64> {
 fn gen_prims(start: u64, end: u64) -> Vec<u64> {
     // inclusive start and end
     let mut prim_vec: Vec<u64> = vec![];
-    for i in start..(end + 1) {
+    for i in (start..=end).rev() {
         if is_prim(i) {
             prim_vec.insert(0, i);
         }
