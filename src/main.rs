@@ -66,19 +66,16 @@ fn is_prim(number: u64) -> bool {
     if number <= 3 {
         return number > 1;
     }
+    if number % 2 == 0 || number % 3 == 0 {
+        return false;
+    }
+
+    // max number is the root from the number
+    let limit: u64 = f64::sqrt(number as f64) as u64 + 1;
 
 
-    for i in 2..number {
-        if i > (number / 2) {
-            // ! thanks to this check there is a ~ 40% speed improvement
-
-            // if it gets in this erea it will be not dividable by any 
-            // folowing numbers because x / (x+1) < 2
-            return true;
-        }
+    for i in 5..limit {
         if number % i == 0 {
-            // returns false if its dividable by i
-            // 1 & number are exclusive
             return false;
         }
     }

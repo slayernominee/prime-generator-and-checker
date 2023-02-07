@@ -6,15 +6,15 @@ its also possible to generate primes in a range
 ## Benchmarks (prime number generator)
 made on Apple MacBook Air M2
 
-./prims --gen 1 100             | total: 0.006s
+./prims --gen 1 100             | total: 0.004s
 
-./prims --gen 1 1,000           | total: 0.006s
+./prims --gen 1 1000            | total: 0.005s
 
-./prims --gen 1 10,000          | total: 0.017s
+./prims --gen 1 10000           | total: 0.006s
 
-./prims --gen 1 100,000         | total: 0.202s
+./prims --gen 1 100000          | total: 0.028s
 
-./prims --gen 1 1,000,000       | total: 13.877s 
+./prims --gen 1 1000000         | total: 0.571s 
 
 ## Usage
 
