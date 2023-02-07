@@ -1,4 +1,3 @@
-//use std::io;
 use std::env;
 
 fn main() {
@@ -22,7 +21,7 @@ fn main() {
     }
 
     // valid modes:
-    // --gen, --check, --help
+    // --gen, --check everyting else will result in help
 
     if mode == "--gen" {
 
@@ -67,11 +66,6 @@ fn is_prim(number: u64) -> bool {
     for i in 2..number {
         if i > (number / 2) {
             // ! thanks to this check there is a ~ 40% speed improvement
-            // ! which is mostly important by high numbers 
-
-            // * benchmarks: cargo build --release
-            // * before: --gen 1 1,000,000  | 22s
-            // * now:    --gen 1 1,000,000  | 13s
 
             // if it gets in this erea it will be not dividable by any 
             // folowing numbers because x / (x+1) < 2
