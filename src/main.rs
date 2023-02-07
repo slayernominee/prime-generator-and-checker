@@ -65,6 +65,11 @@ Commands:
 
 fn is_prim(number: u64) -> bool {
     for i in 2..number {
+        if i > (number / 2) {
+            // if it gets in this erea it will be not dividable by any 
+            // folowing numbers because x / (x+1) < 2
+            return true;
+        }
         if number % i == 0 {
             // returns false if its dividable by i
             // 1 & number are exclusive
