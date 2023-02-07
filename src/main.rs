@@ -63,6 +63,11 @@ Commands:
 }
 
 fn is_prim(number: u64) -> bool {
+    if number <= 3 {
+        return number > 1;
+    }
+
+
     for i in 2..number {
         if i > (number / 2) {
             // ! thanks to this check there is a ~ 40% speed improvement
